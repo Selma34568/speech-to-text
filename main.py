@@ -7,7 +7,7 @@ r = sr.Recognizer()
 def record_text():  
      # Loop in case of errors
      while(1):
-         try:
+        try:
              # use the microphone as source for input.
              with sr.Microphone() as source2:
                  # Prepare recognizer to recieve input
@@ -23,13 +23,13 @@ def record_text():
 
 
 
-         except sr.RequestError as e:
+        except sr.RequestError as e:
              print("Could not request result: {}".format(e))
         
-         except sr.UnknownValueError:
+        except sr.UnknownValueError:
              print("unknown error occurred")
 
-    return
+     return 
 
 def output_text(text):
     f = open ("output.txt", "a")
